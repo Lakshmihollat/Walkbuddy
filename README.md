@@ -1,27 +1,54 @@
-# WalkBuddy -An AI Companion for Visually Aware Navigation
+#  WalkBuddy – An AI Companion for Visually Aware Navigation
 
-**WalkBuddy** is an intelligent object detection and tracking assistant designed to aid pedestrian awareness in real-time or simulated walking environments. Originally built using **MobileNet SSD**, it evolved to adopt **YOLOv8 + DeepSORT** for more accurate detection and multi-object tracking.
-
----
-
-##  What It Does
-
--  Detects objects (like people, bicycles, cars, dogs) in a live feed or walking video.
--  Uses Text-to-Speech to alert users of potential objects ahead.
--  Tracks each detected object using unique IDs to prevent repetitive alerts.
--  Filters out irrelevant or noisy labels like "sofa", "suitcase", "tvmonitor", etc.
--  Supports webcam or recorded videos as input sources.
+**WalkBuddy** is an assistive AI system designed to help **visually impaired individuals** navigate environments more safely by detecting and tracking nearby objects in real time. It leverages state-of-the-art object detection and tracking to provide spoken alerts about potential obstacles or people in the path.
 
 ---
 
-## Evolution
+## What It Does
 
-### Phase 1 – MobileNet SSD:
-- Used OpenCV’s `dnn` module with MobileNet SSD.
-- Quick and lightweight but prone to false positives (e.g., detecting a wall as a sofa).
+-  Detects real-world objects such as **people, bicycles, vehicles, animals** from live camera or video.
+-  Uses **Text-to-Speech (TTS)** to audibly alert the user about nearby objects.
+-  Assigns unique IDs to each detected object using **DeepSORT**, preventing repeated alerts.
+-  Filters out irrelevant or misclassified labels (e.g., `"sofa"`, `"suitcase"`, `"tvmonitor"`).
+-  Supports both **webcam input** and **pre-recorded walking videos** for testing or demonstration.
 
-### Phase 2 – YOLOv8 + DeepSORT:
-- Adopted **YOLOv8n** (via `ultralytics`) for higher accuracy.
+---
+
+##  Evolution of the Project
+
+###  Phase 1 – MobileNet SSD (OpenCV dnn)
+- Used OpenCV’s DNN module with MobileNet SSD.
+- Pros: Lightweight and easy to set up.
+- Cons: Prone to **false positives**, e.g., mislabeling walls as sofas.
+
+###  Phase 2 – YOLOv8 + DeepSORT
+- Switched to **YOLOv8n** via the `ultralytics` library for more robust detection.
 - Integrated **DeepSORT** for real-time multi-object tracking.
-- Significantly reduced repetitive audio alerts and improved overall robustness.
+- Result:Improved accuracy and reduced repetitive audio alerts.
 
+---
+
+## Tech Stack
+
+- Python
+- YOLOv8 (Ultralytics)
+- DeepSORT
+- OpenCV
+- pyttsx3 (offline TTS engine)
+
+---
+
+##  Use Cases
+
+- Navigation assistance for **visually impaired pedestrians**
+- Smart surveillance or pedestrian alert systems
+- Real-time safety companion for walkers or joggers
+
+---
+
+## How to Run
+
+1. Clone the repo
+2. Install dependencies  
+   ```bash
+   pip install -r requirements.txt
