@@ -25,4 +25,3 @@
 - Integrated **DeepSORT** for real-time multi-object tracking.
 - Significantly reduced repetitive audio alerts and improved overall robustness.
 
----
