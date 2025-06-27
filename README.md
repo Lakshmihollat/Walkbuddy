@@ -1,6 +1,6 @@
 #  WalkBuddy – An AI Companion for Visually Aware Navigation
 
-**WalkBuddy** is an assistive AI system designed to help **visually impaired individuals** navigate environments more safely by detecting and tracking nearby objects in real time. It leverages state-of-the-art object detection and tracking to provide spoken alerts about potential obstacles or people in the path.
+**WalkBuddy** is an assistive AI system designed to help **visually impaired individuals** navigate environments more safely by detecting and tracking nearby objects in real time. It leverages object detection and tracking to provide spoken alerts about potential obstacles or people in the path.
 
 ---
 
@@ -10,7 +10,7 @@
 -  Uses **Text-to-Speech (TTS)** to audibly alert the user about nearby objects.
 -  Assigns unique IDs to each detected object using **DeepSORT**, preventing repeated alerts.
 -  Filters out irrelevant or misclassified labels (e.g., `"sofa"`, `"suitcase"`, `"tvmonitor"`).
--  Supports both **webcam input** and **pre-recorded walking videos** for testing or demonstration.
+-  Supports both **webcam input** or **pre-recorded walking videos** for testing or demonstration.
 
 ---
 
